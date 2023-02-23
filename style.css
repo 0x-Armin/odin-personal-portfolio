@@ -1,4 +1,55 @@
+@font-face {
+  font-family: 'loraregular';
+  src: url('./asset/fonts/lora-variablefont_wght-webfont.woff2') format('woff2'),
+    url('./asset/fonts/lora-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   background-color: black;
   color: white;
+
+  font-family: 'loraregular', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  position: relative;
+  height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header::before {
+  content: "";
+  background-image: url('./asset/img/michael-benz-IgWNxx7paz4-unsplash-full.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  opacity: 0.4;
+}
+
+header h1 {
+  position: relative;
+  font-size: 64px;
+}
+
+header h2 {
+  position: relative;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 640px) {
+  header::before {
+    background-image: url('./asset/img/michael-benz-IgWNxx7paz4-unsplash-small.jpg');
+  }
 }
