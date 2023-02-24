@@ -12,7 +12,14 @@ body {
   color: white;
 
   font-family: 'loraregular', Verdana, Geneva, Tahoma, sans-serif;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* HEADER */
 
 header {
   position: relative;
@@ -48,8 +55,50 @@ header h2 {
   font-size: 18px;
 }
 
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 32px 24px;
+
+  border-top: white solid 1px;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 8px;
+}
+
+.footer-header {
+  font-size: 32px;
+}
+
+.footer-content {
+  font-size: 22px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i {
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+/*
+  SMALL SCREENS
+*/
 @media only screen and (max-width: 640px) {
   header::before {
     background-image: url('./asset/img/michael-benz-IgWNxx7paz4-unsplash-small.jpg');
+  }
+
+  footer {
+    grid-template-rows: 1.4fr 1fr 1fr;
   }
 }
